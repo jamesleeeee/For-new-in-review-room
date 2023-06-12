@@ -1,0 +1,832 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>faq_심의실</title>
+	<link href="https://jamesleeeee.github.io/For-new-in-review-room/kba.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript">
+	var flag; //상태 구별을 위한 Flag 변수
+	function getAnswer(quesNum)
+	{
+		MAXNUM = 34; //FAQ 질의 갯수
+		if(document.getElementById("a" + quesNum).style.display == "")
+		{
+			document.getElementById("a" + quesNum).style.display = "none";
+			document.getElementById("num" + quesNum).style.display = "none";			
+			document.getElementById("q" + quesNum).style.color = "#7a7a7a";	
+			flag=0;
+		}
+		else
+		{
+			for (i=1; i<=MAXNUM; i++)
+			{
+				if(quesNum == i)
+				{
+					document.getElementById("a" + i).style.display = "";
+					document.getElementById("num" + i).style.display = "";
+					document.getElementById("q" + i).style.color = "#fea032";
+				}
+				else
+				{
+					document.getElementById("a" + i).style.display = "none";
+					document.getElementById("num" + i).style.display = "none";			
+					document.getElementById("q" + i).style.color = "#7a7a7a"; 
+				}
+			}
+			flag=quesNum;			
+		}
+		
+	}
+	function setOver(obj)//마우스 오버시 Font Color 변경
+	{
+		obj.style.color = "#fea032";
+	}
+	function setOut(num,obj)//마우스 내일때 Font Color 원상태로(단 선택된 셀은 제외)
+	{
+		if(flag==num)
+		obj.style.color = "#fea032";
+		else
+		obj.style.color = "#7a7a7a";
+	}	
+	
+	</script>
+</head>
+<body>
+	<table width="600" border="0" cellspacing="0" cellpadding="0" >
+	    <tr> 
+			<td height="50" background="https://cmreview.kobaco.co.kr/images/bg_popt.jpg"><img src="https://jamesleeeee.github.io/For-new-in-review-room/channela.png"/><span class="font1">심의실 참고자료</span></td>
+		</tr>
+		<tr>
+			<td>
+				<div class="space10"></div>
+				<!--pop_본문 시작-->
+				<!--리스트 시작-->
+				<table width="570" border="0" cellspacing="0" cellpadding="0" align="center">
+					<tr>
+						<td width="10" height="32" background="https://cmreview.kobaco.co.kr/images/bg_listtop_l.gif"> </td>
+						<td width="38" align="center" background="https://cmreview.kobaco.co.kr/images/bg_listtop_c.gif" class="gray3 small strong">번호</td>
+						<td width="1" background="https://cmreview.kobaco.co.kr/images/bg_listtop_line.gif"> </td>
+						<td width="511" align="center" background="https://cmreview.kobaco.co.kr/images/bg_listtop_c.gif" class="gray3 small strong">방송 심의를 위해 기본적으로 알아야 하는 사항</td>
+						<td background="https://cmreview.kobaco.co.kr/images/bg_listtop_r.gif" width="10"> </td>
+					</tr>
+					<tr>
+						<td height="30"> </td>
+						<td class="gray4 small center number">1</td>
+						<td> </td>
+						<td class="gray4 small hand" id="q1" onclick="getAnswer(1);" onmouseover="setOver(this);" onmouseout="setOut(1,this);"><img src="https://cmreview.kobaco.co.kr/images/ico_q.gif" alt="질문" hspace="10" align="absmiddle" />협찬고지</td>
+						<td> </td>
+					</tr>		
+					<tr>
+						<td id="num1" style="display:none;" colspan="2" class="faq_a1"><img src="https://cmreview.kobaco.co.kr/images/ico_a.gif" alt="답변" align="absmiddle" /></td>
+						<td id="a1" style="display:none;" colspan="3" class="gray4 small faq_a2">
+						- 프로그램 제작과 관련해 제작, 장소 등의 협찬을 받은 경우 협찬주명 및 협찬 상품 관련 상표 및<br/>
+					    &nbsp; 로고가 관련 상표 및 로고가 노출되지 않아야 함.<br/>
+						- 브랜드 또는 상표를 노출하려면 간접광고 계약을 맺어야 함.<br/>
+						- 시사/보도, 논평 또는 시사토론 프로그램은 협찬고지 금지.<br/>
+						- 협찬고지 시점은 종료 시 1회에 한함.
+                            </td>
+                        </td>
+					</tr>
+                    <tr>
+						<td height="1" colspan="5" bgcolor="d6d6d6"> </td>
+					</tr>
+					<tr>
+						<td height="30"> </td>
+						<td class="gray4 small center number">2</td>
+						<td> </td>
+						<td class="gray4 small hand" id="q2" onclick="getAnswer(2);" onmouseover="setOver(this);" onmouseout="setOut(2,this);"><img src="https://cmreview.kobaco.co.kr/images/ico_q.gif" alt="질문" hspace="10" align="absmiddle" />방송프로그램 편성시간</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td id="num2" style="display:none;" colspan="2" class="faq_a1"><img src="https://cmreview.kobaco.co.kr/images/ico_a.gif" alt="답변" align="absmiddle" /></td>
+						<td id="a2" style="display:none;" colspan="3" class="gray4 small faq_a2">
+                        -‘해당 방송프로그램을 소개하는 고지(NEXT)’가 시작되는 시간부터 ‘다음 방송프로그램을<br/>
+                        &nbsp; 소개하는 고지(NEXT)’가 시작되기 전까지의 시간으로 광고시간 등을 포함.<br/>
+						</td>
+					</tr>
+					<tr>
+						<td height="1" colspan="5" bgcolor="d6d6d6"> </td>
+					</tr>
+					<tr>
+						<td height="30"> </td>
+						<td class="gray4 small center number">3</td>
+						<td> </td>
+						<td class="gray4 small hand" id="q3" onclick="getAnswer(3);" onmouseover="setOver(this);" onmouseout="setOut(3,this);"><img src="https://cmreview.kobaco.co.kr/images/ico_q.gif" alt="질문" hspace="10" align="absmiddle" />광고시간 총량</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td id="num3" style="display:none;" colspan="2" class="faq_a1"><img src="https://cmreview.kobaco.co.kr/images/ico_a.gif" alt="답변" align="absmiddle" /></td>
+						<td id="a3" style="display:none;" colspan="3" class="gray4 small faq_a2">
+						- 매 방송프로그램 편성시간 당 최대 20/100. <br/> 	       		
+						- 1일 동안 방송되는 각 방송프로그램 편성시간 당 방송광고 시간의 비율의 평균이<br/>
+						&nbsp; 17/100 이하여야 함.<br/><br/>
+						※ 광고 일총량 이란? <br/>
+						☞ 1일 프로그램 시간 총량에 대한 광고 총량의 비율(X) <br/>                    
+						☞ 각 프로그램 편성시간당 방송광고 비율의 평균(○) <br/>
+						</td>
+					</tr>
+					<tr>
+						<td height="1" colspan="5" bgcolor="d6d6d6"> </td>
+					</tr>
+					<tr>
+						<td height="30"> </td>
+						<td class="gray4 small center number">4</td>
+						<td> </td>
+						<td class="gray4 small hand" id="q4" onclick="getAnswer(4);" onmouseover="setOver(this);" onmouseout="setOut(4,this);"><img src="https://cmreview.kobaco.co.kr/images/ico_q.gif" alt="질문" hspace="10" align="absmiddle" />방송광고 종류별 세부기준</td>
+						<td> </td>
+					</tr>			
+					<tr>
+						<td id="num4" style="display:none;" colspan="2" class="faq_a1"><img src="https://cmreview.kobaco.co.kr/images/ico_a.gif" alt="답변" align="absmiddle" /></td>
+						<td id="a4" style="display:none;" colspan="3" class="gray4 small faq_a2">
+						<img src="https://jamesleeeee.github.io/For-new-in-review-room/review2.png" width="650" height="520">
+						</td>
+                        </td>
+					</tr>
+					<tr>
+						<td height="1" colspan="5" bgcolor="d6d6d6"> </td>
+					</tr>
+					<tr>
+						<td height="30"> </td>
+						<td class="gray4 small center number">5</td>
+						<td> </td>
+						<td class="gray4 small hand" id="q5" onclick="getAnswer(5);" onmouseover="setOver(this);" onmouseout="setOut(5,this);"><img src="https://cmreview.kobaco.co.kr/images/ico_q.gif" alt="질문" hspace="10" align="absmiddle" />중간광고</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td id="num5" style="display:none;" colspan="2" class="faq_a1"><img src="https://cmreview.kobaco.co.kr/images/ico_a.gif" alt="답변" align="absmiddle" /></td>
+						<td id="a5" style="display:none;" colspan="3" class="gray4 small faq_a2"> 
+						- 1개의 동일한 방송프로그램이 시작한 후 부터 종료되기 전까지 사이에 그 방송프로그램을 <br/>
+						  &nbsp; 중단하고 편성되는 광고.<br/>
+						- 매회 광고시간은 1분이내.<br/>
+						- 중간광고 노출 직전 시청자가 중간광고가 시작됨을 확실히 알 수 있도록 명확하게 자막 또는 고지를<br/>
+						  &nbsp; 해야 하며, 고지 시 상업적 표현(문구,이미지)을 사용 할 수 없음.<br/>
+                        </td>
+					</tr>					
+					<tr>
+						<td height="1" colspan="5" bgcolor="d6d6d6">
+					<tr>
+						<td height="30"> </td>
+						<td class="gray4 small center number">6</td>
+						<td> </td>
+						<td class="gray4 small hand" id="q6" onclick="getAnswer(6);" onmouseover="setOver(this);" onmouseout="setOut(6,this);"><img src="https://cmreview.kobaco.co.kr/images/ico_q.gif" alt="질문" hspace="10" align="absmiddle" />연속편성·중간광고 통합적용</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td id="num6" style="display:none;" colspan="2" class="faq_a1"><img src="https://cmreview.kobaco.co.kr/images/ico_a.gif" alt="답변" align="absmiddle" /></td>
+						<td id="a6" style="display:none;" colspan="3" class="gray4 small faq_a2">
+                        - 사실상 하나의 프로그램을 1·2부 등으로 분리하여 연속 편성하는 경우 그 프로그램 사이의 <br/> 
+					    &nbsp; 프로그램 광고, 토막광고 및 각 프로그램의 중간광고는 1개의 동일한 프로그램의 중간광고로 <br/>
+						&nbsp; 보아 중간광고에 관한 시간·횟수를 통합 적용함.
+   						</td>
+					</tr>						
+					<tr>
+						<td height="1" colspan="5" bgcolor="d6d6d6"> </td>
+					</tr>
+					<tr>
+						<td height="30"> </td>
+						<td class="gray4 small center number">7</td>
+						<td> </td>
+						<td class="gray4 small hand" id="q7" onclick="getAnswer(7);" onmouseover="setOver(this);" onmouseout="setOut(7,this);"><img src="https://cmreview.kobaco.co.kr/images/ico_q.gif" alt="질문" hspace="10" align="absmiddle" />간접광고와 광고효과 </td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td id="num7" style="display:none;" colspan="2" class="faq_a1"><img src="https://cmreview.kobaco.co.kr/images/ico_a.gif" alt="답변" align="absmiddle" /></td>
+						<td id="a7" style="display:none;" colspan="3" class="gray4 small faq_a2">
+                        - 영상과 자막/멘트가 함께 나갈 때 주의해야 함. 원칙적으로는 화면에서 간접광고(PPL) 상품을<br/> 
+                        &nbsp; 보여주면서 그에 대해 자막을 보여주거나 언급을 하는 경우는 모두 제재 대상이 될 수 있음.<br/>
+                        - 프로그램 전개상 필요하거나 전개가 자연스러우면 봐주는 경우도 있지만, 항상 조심할 필요가 있음.<br/> 
+
+                        </td>
+					</tr>						
+					<tr>
+						<td height="1" colspan="5" bgcolor="d6d6d6"> </td>
+					</tr>
+					<tr>
+						<td height="30"> </td>
+						<td class="gray4 small center number">8</td>
+						<td> </td>
+						<td class="gray4 small hand" id="q8" onclick="getAnswer(8);" onmouseover="setOver(this);" onmouseout="setOut(8,this);"><img src="https://cmreview.kobaco.co.kr/images/ico_q.gif" alt="질문" hspace="10" align="absmiddle" />가상광고 </td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td id="num8" style="display:none;" colspan="2" class="faq_a1"><img src="https://cmreview.kobaco.co.kr/images/ico_a.gif" alt="답변" align="absmiddle" /></td>
+						<td id="a8" style="display:none;" colspan="3" class="gray4 small faq_a2">
+                        - 방송프로그램에 컴퓨터 그래픽을 이용하여 만든 가상의 이미지를 삽입하는 형태의 광고.<br/>
+                        - 운동경기 중계, 오락에 관한 방송프로그램, 스포츠 분야의 보도에 관한 방송프로그램에 한함.<br/>
+						- 교양, 시사보도 프로그램에는 넣을 수 없음.<br/>
+                        - 어린이를 주 시청대상으로 하는 프로그램의 경우 허용 불가, 방송광고 시간 규제를 받는 품목<br/>
+                          &nbsp; (주류 등) 또는 방송 광고가 금지된 품목은 간접광고, 가상광고를 할 수 없음.<br/>
+						- 상품 등의 거래정보(가격, 구성, 위치·연락처, 행사기간 등 거래와 직접 관련된 정보)를 자막,<br/>
+						  &nbsp; 음성 또는 소품을 통하여 노출·언급하는 내용은 넣을 수 없음.
+						</td>
+					</tr>	
+					
+					<tr>
+						<td height="1" colspan="5" bgcolor="d6d6d6"> </td>
+					</tr>
+					<tr>
+						<td height="30"> </td>
+						<td class="gray4 small center number">9</td>
+						<td> </td>
+						<td class="gray4 small hand" id="q9" onclick="getAnswer(9);" onmouseover="setOver(this);" onmouseout="setOut(9,this);"><img src="https://cmreview.kobaco.co.kr/images/ico_q.gif" alt="질문" hspace="10" align="absmiddle" />청소년 보호시간대</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td id="num9" style="display:none;" colspan="2" class="faq_a1"><img src="https://cmreview.kobaco.co.kr/images/ico_a.gif" alt="답변" align="absmiddle" /></td>
+						<td id="a9" style="display:none;" colspan="3" class="gray4 small faq_a2">
+						- 평일: 오전 7시 ~ 오전 9시 및 오후 1시 ~ 오후 10시<br/> 
+						- 토요일,공휴일 및 방학기간: 오전 7시 ~ 오후 10시<br/>
+                        - 이 시간내에는 청소년유해매체물을 방송해서는 안 됨.
+						</td>
+					</tr>	
+                    
+					<tr>
+						<td height="1" colspan="5" bgcolor="d6d6d6"> </td>
+					</tr>
+					<tr>
+						<td height="30"> </td>
+						<td class="gray4 small center number">10</td>
+						<td> </td>
+						<td class="gray4 small hand" id="q10" onclick="getAnswer(10);" onmouseover="setOver(this);" onmouseout="setOut(10,this);"><img src="https://cmreview.kobaco.co.kr/images/ico_q.gif" alt="질문" hspace="10" align="absmiddle" />의료인 관련 정보제공</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td id="num10" style="display:none;" colspan="2" class="faq_a1"><img src="https://cmreview.kobaco.co.kr/images/ico_a.gif" alt="답변" align="absmiddle" /></td>
+						<td id="a10" style="display:none;" colspan="3" class="gray4 small faq_a2">
+						- 의료인, 의료기관과 관련해서는 광고효과에 각별히 주의해야 함.<br/>
+						- 협찬고지는 절대 불가함. 아울러 의료인, 의료기관과 시청자를 연결하는 정보(전화번호, 홈페이지)<br/>
+                         &nbsp; 를 게시하는 것은 절대 금물임.<br/> 
+                        - 방송심의규정 제42조(의료행위 등) ③항 3호,<br/>
+                         &nbsp; [방송이 편지나 엽서, 전화 등의 방법으로 의학 상담을 할 때에는 방송 중 실시간 의학 상담의<br/> 
+                         &nbsp; 경우를 제외하고 시청자를 출연 의료인과 직접적·간접적으로 연결시켜서는 아니 된다]  
+						</td>
+					</tr>
+
+                    <tr>
+						<td height="1" colspan="5" bgcolor="d6d6d6"> </td>
+					</tr>
+					<tr>
+						<td height="30"> </td>
+						<td class="gray4 small center number">11</td>
+						<td> </td>
+						<td class="gray4 small hand" id="q11" onclick="getAnswer(11);" onmouseover="setOver(this);" onmouseout="setOut(11,this);"><img src="https://cmreview.kobaco.co.kr/images/ico_q.gif" alt="질문" hspace="10" align="absmiddle" />연령 등급</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td id="num11" style="display:none;" colspan="2" class="faq_a1"><img src="https://cmreview.kobaco.co.kr/images/ico_a.gif" alt="답변" align="absmiddle" /></td>
+						<td id="a11" style="display:none;" colspan="3" class="gray4 small faq_a2">
+                        - '모든연령시청가 / 7세이상시청가 / 12세이상시청가 / 15세이상시청가 / 19세이상시청가'로 나뉨.<br/>
+                        - "15세이상시청가"와 "19세이상시청가" 등급에 해당하는 경우에는 분류사유(주제, 폭력성, 선정성<br/>
+                          &nbsp; ,언어,모방위험 등)가 포함된 부연설명이 전체 고지화면의 1/2 이상을 차지하도록 표시해야 함<br/>
+                        - 분류 기준 :<a target="_blank" href="https://url.kr/5xl3cn" style="color:red">관련링크!! </a> <br/>
+						</td>
+					</tr>	
+				</table>
+				<div class="space10"></div>
+
+                <!--pop_본문 시작-->
+				<!--리스트 시작-->
+				<table width="570" border="0" cellspacing="0" cellpadding="0" align="center">
+					<tr>
+						<td width="10" height="32" background="https://cmreview.kobaco.co.kr/images/bg_listtop_l.gif"> </td>
+						<td width="38" align="center" background="https://cmreview.kobaco.co.kr/images/bg_listtop_c.gif" class="gray3 small strong">번호</td>
+						<td width="1" background="https://cmreview.kobaco.co.kr/images/bg_listtop_line.gif"> </td>
+						<td width="511" align="center" background="https://cmreview.kobaco.co.kr/images/bg_listtop_c.gif" class="gray3 small strong">광고심의 기본 사항</td>
+						<td background="https://cmreview.kobaco.co.kr/images/bg_listtop_r.gif" width="10"> </td>
+					</tr>
+					<tr>
+						<td height="30"> </td>
+						<td class="gray4 small center number">1</td>
+						<td> </td>
+						<td class="gray4 small hand" id="q12" onclick="getAnswer(12);" onmouseover="setOver(this);" onmouseout="setOut(11,this);"><img src="https://cmreview.kobaco.co.kr/images/ico_q.gif" alt="질문" hspace="10" align="absmiddle" />최상급 표현 관련</td>
+						<td> </td>
+					</tr>
+					<!--답변1-->			
+					<tr>
+						<td id="num12" style="display:none;" colspan="2" class="faq_a1"><img src="https://cmreview.kobaco.co.kr/images/ico_a.gif" alt="답변" align="absmiddle" /></td>
+						<td id="a12" style="display:none;" colspan="3" class="gray4 small faq_a2">
+	       			    - 대표, 최대, 최고, 유일, 넘버원, 1위 등 최상급 표현 시에는 해당 표현에 대한 객관적 근거자료가 <br/> 
+	       			      &nbsp; 있어야 하며, 해당 근거를 동일화면에 자막형태로 표시해야함(라디오의 경우 멘트로 표기)<br/>
+                        - 근거자료의 예 : 공신력 있는 조사기관에 의한 시장점유율, 판매율 등의 자료<br/>
+                         &nbsp; (광고주 자체 조사 자료는 제한됨)
+                        </td>
+					</tr>
+					<!--//답변1-->
+					<tr>
+						<td height="1" colspan="5" bgcolor="d6d6d6"> </td>
+					</tr>
+					<tr>
+						<td height="30"> </td>
+						<td class="gray4 small center number">2</td>
+						<td> </td>
+						<td class="gray4 small hand" id="q13" onclick="getAnswer(13);" onmouseover="setOver(this);" onmouseout="setOut(12,this);"><img src="https://cmreview.kobaco.co.kr/images/ico_q.gif" alt="질문" hspace="10" align="absmiddle" />질병의 명칭</td>
+						<td> </td>
+					</tr>
+					<!--답변2-->
+					<tr>
+						<td id="num13" style="display:none;" colspan="2" class="faq_a1"><img src="https://cmreview.kobaco.co.kr/images/ico_a.gif" alt="답변" align="absmiddle" /></td>
+						<td id="a13" style="display:none;" colspan="3" class="gray4 small faq_a2">
+						- 일반 공산품, 식품, 농산물 등의 광고에서 특정 질병의 명칭(아토피, 새집증후군 등의 <br/>
+						  &nbsp; 환경적 요인으로 인한 질병 포함)을 사용하여 해당 질병에 효능·효과가 있는 것으로 <br/>
+						  &nbsp; 표현하는 것은 제품을 의료기기 및 의약품으로 오인시킬 우려가 있으므로 제한됨.
+						</td>
+					</tr>
+					<!--//답변2-->
+					<tr>
+						<td height="1" colspan="5" bgcolor="d6d6d6"> </td>
+					</tr>
+					<tr>
+						<td height="30"> </td>
+						<td class="gray4 small center number">3</td>
+						<td> </td>
+						<td class="gray4 small hand" id="q14" onclick="getAnswer(14);" onmouseover="setOver(this);" onmouseout="setOut(13,this);"><img src="https://cmreview.kobaco.co.kr/images/ico_q.gif" alt="질문" hspace="10" align="absmiddle" />의료인을 활용한 광고</td>
+						<td> </td>
+					</tr>
+					<!--답변3-->			
+					<tr>
+						<td id="num14" style="display:none;" colspan="2" class="faq_a1"><img src="https://cmreview.kobaco.co.kr/images/ico_a.gif" alt="답변" align="absmiddle" /></td>
+						<td id="a14" style="display:none;" colspan="3" class="gray4 small faq_a2">
+						- 의료법 제56조(의료광고의 금지 등) 제4항에 의거해 ‘전문의’, ‘의료인’, ‘의사’ 등 의료인으로서의<br/>
+						  &nbsp; 광고는 제한됨. 다만, 의료인으로서가 아닌 단순 광고 모델로 출연하는 경우 가능.<br/>
+                        - 의료인이 광고에 등장하는 경우, 의사 가운을 입거나 소속된 병원 또는 그 상징물이 노출되는 것은<br/>
+                          &nbsp; 제한함.
+                        </td>
+					</tr>
+					<!--//답변3-->
+					<tr>
+						<td height="1" colspan="5" bgcolor="d6d6d6"> </td>
+					</tr>
+					<tr>
+						<td height="30"> </td>
+						<td class="gray4 small center number">4</td>
+						<td> </td>
+						<td class="gray4 small hand" id="q15" onclick="getAnswer(15);" onmouseover="setOver(this);" onmouseout="setOut(14,this);"><img src="https://cmreview.kobaco.co.kr/images/ico_q.gif" alt="질문" hspace="10" align="absmiddle" />가격(요금, 상품가 등)의 표시</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td id="num15" style="display:none;" colspan="2" class="faq_a1"><img src="https://cmreview.kobaco.co.kr/images/ico_a.gif" alt="답변" align="absmiddle" /></td>
+						<td id="a15" style="display:none;" colspan="3" class="gray4 small faq_a2"> 
+						 - 가격을 표시할 때는 소비자가 실제로 지출하는 최종 비용을 기준으로 표시하는 것을 원칙으로 함.<br/>
+                         - 부가세·가입비·옵션·부대비용 등 별도의 추가요금이 있는 경우 해당 제한사항을 표시.<br/>
+                         - 대리운전·퀵서비스 등 서비스에 대한 요금을 표시하는 경우 해당 요금의 명확한 기준을 표시하여야<br/>
+                           &nbsp; 하며, 일부 요금만을 강조 표시하여 고정요금으로 오인시키지 않도록 주의.
+                        </td>
+					</tr>					
+					<tr>
+						<td height="1" colspan="5" bgcolor="d6d6d6">
+					<tr>
+						<td height="30"> </td>
+						<td class="gray4 small center number">5</td>
+						<td> </td>
+						<td class="gray4 small hand" id="q16" onclick="getAnswer(16);" onmouseover="setOver(this);" onmouseout="setOut(15,this);"><img src="https://cmreview.kobaco.co.kr/images/ico_q.gif" alt="질문" hspace="10" align="absmiddle" />수상 관련 표현</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td id="num16" style="display:none;" colspan="2" class="faq_a1"><img src="https://cmreview.kobaco.co.kr/images/ico_a.gif" alt="답변" align="absmiddle" /></td>
+						<td id="a16" style="display:none;" colspan="3" class="gray4 small faq_a2">
+                          - 수상에 관한 광고는 수상년도, 주최기관, 수상부문을 표시하여야 함.<br/>
+                          - 연속 수상의 경우 최종 수상년도만 표기해도 가능함.
+   						</td>
+					</tr>						
+					<tr>
+						<td height="1" colspan="5" bgcolor="d6d6d6"> </td>
+					</tr>
+					<tr>
+						<td height="30"> </td>
+						<td class="gray4 small center number">6</td>
+						<td> </td>
+						<td class="gray4 small hand" id="q17" onclick="getAnswer(17);" onmouseover="setOver(this);" onmouseout="setOut(16,this);"><img src="https://cmreview.kobaco.co.kr/images/ico_q.gif" alt="질문" hspace="10" align="absmiddle" />특허 관련 표현</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td id="num17" style="display:none;" colspan="2" class="faq_a1"><img src="https://cmreview.kobaco.co.kr/images/ico_a.gif" alt="답변" align="absmiddle" /></td>
+						<td id="a17" style="display:none;" colspan="3" class="gray4 small faq_a2">
+					    - 특허가 등록되지 않고 현재 출원 중인 경우에는 관련 표현은 제한됨.<br/>   
+                        - 등록된 특허명칭일지라도 효능·효과 등에 대해 소비자 오인이 발생할 우려가 있는 경우<br/>   
+                        &nbsp; 해당 명칭 사용이 제한됨.
+						</td>
+					</tr>						
+					<tr>
+						<td height="1" colspan="5" bgcolor="d6d6d6"> </td>
+					</tr>
+					<tr>
+						<td height="30"> </td>
+						<td class="gray4 small center number">7</td>
+						<td> </td>
+						<td class="gray4 small hand" id="q18" onclick="getAnswer(18);" onmouseover="setOver(this);" onmouseout="setOut(17,this);"><img src="https://cmreview.kobaco.co.kr/images/ico_q.gif" alt="질문" hspace="10" align="absmiddle" />광고노래 관련</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td id="num18" style="display:none;" colspan="2" class="faq_a1"><img src="https://cmreview.kobaco.co.kr/images/ico_a.gif" alt="답변" align="absmiddle" /></td>
+						<td id="a18" style="display:none;" colspan="3" class="gray4 small faq_a2">
+						- 광고노래는 상업적 메시지의 가사를 담은 곡을 의미함.<br/>
+                        - 일반적으로 동요로 알려진 노래의 경우 광고노래로 개사 또는 편곡 사용이 금지.<br/>
+                          &nbsp; (해당 곡의 기원과 상관없이 현재 동요로 쓰이는 곡은 모두 해당 ‘우리모두 다함께’, <br/>
+                          &nbsp; ‘떴다 떴다 비행기’, ‘열꼬마 인디언’, ‘빙빙 돌아라’ 등) <br/> 
+                        - 어린이가 광고노래를 부르는 것은 금지됨.(성인 성우가 어린이 목소리로 녹음한 경우에는<br/> 
+                          &nbsp; 신분증 등으로 입증 시 사용 가능)<br/>
+						- 방송광고는 우리나라의 민요를 개사하여 사용하는 경우 해당 상품명·제조사 등 상품과 관련된<br/>
+						  &nbsp; 표현이나 상품의 사용을 권장하는 표현 등을 가사에 포함시켜서는 안 됨.
+						</td>
+					</tr>	
+					
+					<tr>
+						<td height="1" colspan="5" bgcolor="d6d6d6"> </td>
+					</tr>
+					<tr>
+						<td height="30"> </td>
+						<td class="gray4 small center number">8</td>
+						<td> </td>
+						<td class="gray4 small hand" id="q19" onclick="getAnswer(19);" onmouseover="setOver(this);" onmouseout="setOut(18,this);"><img src="https://cmreview.kobaco.co.kr/images/ico_q.gif" alt="질문" hspace="10" align="absmiddle" />법정단위 사용</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td id="num19" style="display:none;" colspan="2" class="faq_a1"><img src="https://cmreview.kobaco.co.kr/images/ico_a.gif" alt="답변" align="absmiddle" /></td>
+						<td id="a19" style="display:none;" colspan="3" class="gray4 small faq_a2">
+						- 계량에 관한 법률 제6조에 의거하여 비법정단위를 광고에 사용할 수 없음(예 : 인치, 돈, 평, 야드 등).
+						</td>
+					</tr>
+                    
+                    <tr>
+						<td height="1" colspan="5" bgcolor="d6d6d6"> </td>
+					</tr>
+					<tr>
+						<td height="30"> </td>
+						<td class="gray4 small center number">9</td>
+						<td> </td>
+						<td class="gray4 small hand" id="q20" onclick="getAnswer(20);" onmouseover="setOver(this);" onmouseout="setOut(19,this);"><img src="https://cmreview.kobaco.co.kr/images/ico_q.gif" alt="질문" hspace="10" align="absmiddle" />인포광고란 무엇인가</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td id="num20" style="display:none;" colspan="2" class="faq_a1"><img src="https://cmreview.kobaco.co.kr/images/ico_a.gif" alt="답변" align="absmiddle" /></td>
+						<td id="a20" style="display:none;" colspan="3" class="gray4 small faq_a2">
+						- 인포머셜은 Information과 Commercial의 합성어임. 기업이나 상품의 이미지를 광고하는 것이 아니<br/>
+                          &nbsp; 라 특정 상품을 구체적으로 설명하며 시청자에게 직접 판매를 목적으로, 최소 1분 30초에서 최대<br/>
+                          &nbsp; 10분까지 진행하는 광고임.<br/><br/>
+
+                        - 아울러, 특정 상품을 구체적으로 설명하는 쇼핑호스트가 등장하는 광고는 일단 인포머셜로 간주할<br/>
+						 &nbsp; 수 있음.<br/>
+						 &nbsp; ‘쇼핑호스트’라는 직업은 광고모델과는 전혀 다른 개념으로 전속계약 없이 상품에 대한 설명을 <br/>
+						 &nbsp; 하는 사람을 말함.
+						</td>
+                        <tr>
+                            <td height="1" colspan="5" bgcolor="d6d6d6"> </td>
+                        </tr>
+                        <tr>
+                            <td height="30"> </td>
+                            <td class="gray4 small center number">10</td>
+                            <td> </td>
+                            <td class="gray4 small hand" id="q21" onclick="getAnswer(21);" onmouseover="setOver(this);" onmouseout="setOut(20,this);"><img src="https://cmreview.kobaco.co.kr/images/ico_q.gif" alt="질문" hspace="10" align="absmiddle" />통신판매</td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td id="num21" style="display:none;" colspan="2" class="faq_a1"><img src="https://cmreview.kobaco.co.kr/images/ico_a.gif" alt="답변" align="absmiddle" /></td>
+                            <td id="a21" style="display:none;" colspan="3" class="gray4 small faq_a2">
+                                통신판매<br/>
+                                - 통신판매로 상행위가 이루어지는 상품, 용역의 방송광고에서는 다음 사항을 정확하게 밝혀야 함.<br/>
+								  · 상호 및 대표자 성명<br/> 
+                                  · 주소, 전화번호 및 전자우편주소<br/>
+                                  · 공정거래위원회 또는 특별자치도지사·시장·군수·구청장에게 한 신고의 신고번호와 그 신고를 받은<br/>
+                                &nbsp; 기관의 이름 등 신고를 확인할 수 있는 사항<br/>
+								  · 배달에 소요되는 기간 및 비용
+                            </td>
+                            <tr>
+                                <td height="1" colspan="5" bgcolor="d6d6d6"> </td>
+                            </tr>
+                            <tr>
+                                <td height="30"> </td>
+                                <td class="gray4 small center number">11</td>
+                                <td> </td>
+                                <td class="gray4 small hand" id="q22" onclick="getAnswer(22);" onmouseover="setOver(this);" onmouseout="setOut(21,this);"><img src="https://cmreview.kobaco.co.kr/images/ico_q.gif" alt="질문" hspace="10" align="absmiddle" />어린이 보호</td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td id="num22" style="display:none;" colspan="2" class="faq_a1"><img src="https://cmreview.kobaco.co.kr/images/ico_a.gif" alt="답변" align="absmiddle" /></td>
+                                <td id="a22" style="display:none;" colspan="3" class="gray4 small faq_a2">
+                                    - 방송광고는 어린이 보호를 위하여 다음 각 호의 표현을 하여서는 아니됨.<br/>
+									  · 어린이가 상품과 관련된 상업문이나 광고노래, 또는 제품의 특징을 전달하는 표현<br/> 
+                                      · 상품의 소유로 어린이의 능력이나 행동이 변할 것이라는 표현<br/>
+                                      · 상품을 소유하지 못하면 열등감을 갖거나 조롱의 대상이 된다는 표현<br/> 
+                                      · 상품을 구입하도록 어린이를 충동하거나 부모등에게 상품 구매를 요구하도록 자극하는 표현<br/> 
+                                      · 어린이의 사행심을 조장하는 표현<br/> 
+                                      · 어린이를 위험한 장소에 있게 하거나 위험한 행동을 취하게 하는 표현<br/> 
+                                      · 어린이의 건전한 식생활 또는 건강을 저해하는 표현<br/>
+                                </td>
+                            </tr>        
+                        
+                        </tr>        
+					</tr>	
+					
+				</table>
+				<div class="space10"></div>
+				<!--pop_본문3 시작-->
+				<!--리스트 시작-->
+				<table width="570" border="0" cellspacing="0" cellpadding="0" align="center">
+					<tr>
+						<td width="10" height="31" background="https://cmreview.kobaco.co.kr/images/bg_listtop_l.gif"> </td>
+						<td width="38" align="center" background="https://cmreview.kobaco.co.kr/images/bg_listtop_c.gif" class="gray3 small strong">번호</td>
+						<td width="1" background="https://cmreview.kobaco.co.kr/images/bg_listtop_line.gif"> </td>
+						<td width="511" align="center" background="https://cmreview.kobaco.co.kr/images/bg_listtop_c.gif" class="gray3 small strong">주요 품목별 중점 심의 사항</td>
+						<td background="https://cmreview.kobaco.co.kr/images/bg_listtop_r.gif" width="10"> </td>
+					</tr>					
+					<tr>
+						<td height="30"> </td>
+						<td class="gray4 small center number">1</td>
+						<td> </td>
+						<td class="gray4 small hand" id="q23" onclick="getAnswer(23);" onmouseover="setOver(this);" onmouseout="setOut(22,this);"><img src="https://cmreview.kobaco.co.kr/images/ico_q.gif" alt="질문" hspace="10" align="absmiddle" />식품 광고</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td id="num23" style="display:none;" colspan="2" class="faq_a1"><img src="https://cmreview.kobaco.co.kr/images/ico_a.gif" alt="답변" align="absmiddle" /></td>
+						<td id="a23" style="display:none;" colspan="3" class="gray4 small faq_a2">
+						- 질병의 치료에 효능이 있다는 내용이나 의약품 혼동 우려가 있는 표현은 금지됨.<br/>
+						- 정부기관이 아닌 단체나 협회의 인증 또는 보증 표현은 금지됨.<br/>
+						- 특정 성분을 강조했을 경우 해당 성분의 함량을 표시해야 함.<br/>
+						- 성분 함량 표현이 100%로 표현되는 경우 해당 성분의 제품 내 실제 함량을 병기해야 함.<br/>
+						- 건강기능식품 광고 화면 내에 ‘건강기능식품’이라는 자막을 표기해야 함.<br/>
+						- 광고에서 특정 영양 성분 또는 해당 영양 성분의 증감을 강조할 경우에는 식약처의 세부 기준에<br/> 
+						  &nbsp; 따라야 함(공지사항 관련자료 참조)<br/>
+						- 어린이식생활안전관리특별법에 따른 어린이 기호식품은 고열량/저영양 식품 판별 결과를 제출<br/>
+						  &nbsp; 해야 함.<br/>
+						- 성장기용 조제식 광고는 식품산업협회 심의필증 및 조제분유와의 구별을 위해 1단계 품목제조 <br/> 
+						  &nbsp; 보고서를 제출해야 함 또한 조제분유 광고로 오인될 수 있는 표현(모유 관련 표현 및 화면과 과도한<br/> 
+						  &nbsp; 초유 표현 등)은 제한되고, 화면 내 식품 유형인 “성장기용 조제식”의 자막을 인지될 수 있을 정도의<br/>
+						  &nbsp; 크기로 노출해야 함.
+						</td>
+					</tr>						
+					<tr>
+						<td height="1" colspan="5" bgcolor="d6d6d6"> </td>
+					</tr>
+					<tr>
+						<td height="30"> </td>
+						<td class="gray4 small center number">2</td>
+						<td> </td>
+						<td class="gray4 small hand" id="q24" onclick="getAnswer(24);" onmouseover="setOver(this);" onmouseout="setOut(23,this);"><img src="https://cmreview.kobaco.co.kr/images/ico_q.gif" alt="질문" hspace="10" align="absmiddle" />주류 광고</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td id="num24" style="display:none;" colspan="2" class="faq_a1"><img src="https://cmreview.kobaco.co.kr/images/ico_a.gif" alt="답변" align="absmiddle" /></td>
+						<td id="a24" style="display:none;" colspan="3" class="gray4 small faq_a2">
+						- 알콜 성분 17도 이상의 주류는 방송광고 금지 품목임(관련된 기업광고도 동일하게 적용됨. <br/>
+						  &nbsp; ‘알콜성분 17도 이상의 주류’이외의 제품을 병행하여 생산하는 기업의 경우 제품의 대표성, 매출액,<br/>
+						  &nbsp; 인지도 등에서 ‘알콜성분 17도 이상의 주류’가 차지하는 비중을 고려하여 판단함)<br/>
+						- 주류 광고에서 다음 표현은 금지됨.<br/>
+						- 지나친 음주분위기를 묘사하거나 음주행위를 지나치게 미화.<br/>
+						- 음주가 사회적 인정이나 성공에 필요하다고 주장하거나 이를 암시.<br/>
+						- 적당한 음주는 건강에 해롭지 않다는 표현.<br/>
+						- 음주가 체력 또는 운동능력을 향상시킨다거나 근심, 걱정을 없애준다거나 질병의 치료에 도움이<br/>
+						  &nbsp; 된다는 표현.<br/>
+						- 높은 경각심을 필요로 하는 상황에서 음주하는 행위를 묘사함으로써 안전을 저해.<br/>
+						- 19세 미만의 모델은 출연이 금지되며 청소년의 인물 또는 목소리를 묘사해서는 안됨.<br/>
+						- 제품명, 제조사 등 제품과 관련된 명칭이나 음주 권장 내용이 포함된 광고 노래는 금지됨.<br/>
+						- 경품류의 제공 및 할인판매에 관한 내용을 포함하는 것은 금지됨.<br/>
+						- 모든 주류광고에는 보건복지부가 정한 음주경고문을 표시해야 함.
+						</td>
+					</tr>											
+					<tr>
+						<td height="1" colspan="5" bgcolor="d6d6d6"> </td>
+					</tr>
+					<tr>
+						<td height="42"> </td>
+						<td class="gray4 small center number">3</td>
+						<td> </td>
+						<td class="gray4 small hand" id="q25" onclick="getAnswer(25);" onmouseover="setOver(this);" onmouseout="setOut(24,this);"><img src="https://cmreview.kobaco.co.kr/images/ico_q.gif" alt="질문" hspace="10" align="absmiddle" />전기/전자제품 광고</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td id="num25" style="display:none;" colspan="2" class="faq_a1"><img src="https://cmreview.kobaco.co.kr/images/ico_a.gif" alt="답변" align="absmiddle" /></td>
+						<td id="a25" style="display:none;" colspan="3" class="gray4 small faq_a2">
+						- 최신 기술 등 기술적 성취에 대한 광고 표현시 독립된 시험기관의 시험자료 및 공신력 있는 <br/>
+						  &nbsp; 학술문헌 등으로 입증해야 함.
+						</td>
+					</tr>						
+					<tr>
+						<td height="1" colspan="5" bgcolor="d6d6d6"> </td>
+					</tr>
+					<tr>
+						<td height="30"> </td>
+						<td class="gray4 small center number">4</td>
+						<td> </td>
+						<td class="gray4 small hand" id="q26" onclick="getAnswer(26);" onmouseover="setOver(this);" onmouseout="setOut(25,this);"><img src="https://cmreview.kobaco.co.kr/images/ico_q.gif" alt="질문" hspace="10" align="absmiddle" />부동산 광고</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td id="num26" style="display:none;" colspan="2" class="faq_a1"><img src="https://cmreview.kobaco.co.kr/images/ico_a.gif" alt="답변" align="absmiddle" /></td>
+						<td id="a26" style="display:none;" colspan="3" class="gray4 small faq_a2">
+						- 분양광고를 하고자 하는 자는 부동산(건축물,분양) 관련법령에 따라 의무적으로 사업계획승인서<br/>
+						  &nbsp; 또는 건축허가서를 제출하고 TV 화면에 시행, 시공, 분양자를 자막으로 표시해야함. 라디오의 경우<br/>
+						  &nbsp; 에는 그 중 하나를 멘트로 언급해야 함.<br/>  
+						- 분양 광고에서 이미지 화면을 사용한 경우, 소비자가 오인하지 않도록 이미지 화면임을 자막으로<br/>
+						  &nbsp; 명시해야 함.<br/>
+						- 비법정단위인 ‘평’은 사용할 수 없으며 법정단위인 ‘㎡’를 사용해야 함.<br/>
+						- ‘프리미엄’의 표현이 분양가와 시세가격의 차액을 의미하는 표현으로 쓰이면 금지됨.<br/>
+						  &nbsp; (단, 추상적인 의미의 ‘프리미엄’ 표현은 사용 가능함)<br/>
+						- ‘역세권’ 표현은 「역세권의 개발 및 이용에 관한 법률」에 따른 역세권개발지구의 경우를<br/>
+						  &nbsp; 제외하고 사용이 불가능함. <br/>
+						- 광고 제작 전 참조해야 할 사항 <br/>
+						&nbsp; ▶ 방송통신심의위원회 방송광고심의에 관한 규정 제35조(부동산등)<br/> 
+						&nbsp; ▶ 공정거래위원회 「표시·광고의 공정화에 관한 법률」(약칭:표시광고법)에 따른「중요한 표시·광
+						&nbsp;&nbsp;&nbsp;&nbsp;고」<br/>
+						&nbsp; 사항 고시 - Ⅴ. 업종별 중요정보 - 3. 부동산업 및 임대업 및「부동산 표시광고에 관한 심사지침」<br/>
+						&nbsp; ▶ 한국방송협회 심의부 「부동산 광고 시 유의할 점」<br/>
+						</td>
+					</tr>						
+					<tr>
+						<td height="1" colspan="5" bgcolor="d6d6d6"> </td>
+					</tr>
+					<tr>
+						<td height="30"> </td>
+						<td class="gray4 small center number">5</td>
+						<td> </td>
+						<td class="gray4 small hand" id="q27" onclick="getAnswer(27);" onmouseover="setOver(this);" onmouseout="setOut(26,this);"><img src="https://cmreview.kobaco.co.kr/images/ico_q.gif" alt="질문" hspace="10" align="absmiddle" />화장품 광고</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td id="num27" style="display:none;" colspan="2" class="faq_a1"><img src="https://cmreview.kobaco.co.kr/images/ico_a.gif" alt="답변" align="absmiddle" /></td>
+						<td id="a27" style="display:none;" colspan="3" class="gray4 small faq_a2">
+						- 식약처의 [화장품 표시·광고 관리 가이드라인]을 참고하여 광고할 것.<br/>
+						- 인체적용시험 자료를 광고에 활용할 경우 시험 조건, 조사 기관, 년도 등을 자막으로 표기해야 함.<br/>
+						- 기능성 화장품에서 효능·효과가 강조되는 경우 화장품의 유형(예 : 미백 기능성 화장품 등)을<br/>
+						&nbsp; 표기해야 함.
+					</tr>						
+					<tr>
+						<td height="1" colspan="5" bgcolor="d6d6d6"> </td>
+					</tr>
+					<tr>
+						<td height="30"> </td>
+						<td class="gray4 small center number">6</td>
+						<td> </td>
+						<td class="gray4 small hand" id="q28" onclick="getAnswer(28);" onmouseover="setOver(this);" onmouseout="setOut(27,this);"><img src="https://cmreview.kobaco.co.kr/images/ico_q.gif" alt="질문" hspace="10" align="absmiddle" />의약품 및 의료기기 광고</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td id="num28" style="display:none;" colspan="2" class="faq_a1"><img src="https://cmreview.kobaco.co.kr/images/ico_a.gif" alt="답변" align="absmiddle" /></td>
+						<td id="a28" style="display:none;" colspan="3" class="gray4 small faq_a2">
+						- 의약품과 의료기기 광고는 한국제약바이오협회 및 한국의료기기산업협회의 광고심의필증을<br/>
+						 &nbsp; 콘티와 함께 첨부해야 함.<br/>
+						- 사전심의필 광고라 할지라도 효능·효과 오인 화면(CG포함)은 제한됨.<br/>
+						- 의료기기 광고는 ‘의료기기’라는 내용을 표시해야 함.
+						 </td>
+					</tr>						
+					<tr>
+						<td height="1" colspan="5" bgcolor="d6d6d6"> </td>
+					</tr>
+					<tr>
+						<td height="30"> </td>
+						<td class="gray4 small center number">7</td>
+						<td> </td>
+						<td class="gray4 small hand" id="q29" onclick="getAnswer(29);" onmouseover="setOver(this);" onmouseout="setOut(28,this);"><img src="https://cmreview.kobaco.co.kr/images/ico_q.gif" alt="질문" hspace="10" align="absmiddle" />영화/비디오물/공연물/게임물 광고</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td id="num29" style="display:none;" colspan="2" class="faq_a1"><img src="https://cmreview.kobaco.co.kr/images/ico_a.gif" alt="답변" align="absmiddle" /></td>
+						<td id="a29" style="display:none;" colspan="3" class="gray4 small faq_a2">
+						- 영화/비디오물/공연물/게임물의 관람등급 또는 이용등급 자료를 제출해야 하며, 해당 등급을 광고<br/>
+						 &nbsp; 에 표시해야 함.<br/>
+						- 영화상영등급분류필증을 받기 전 광고를 집행하고자 할 때에는 ‘영상물등급위원회 등급분류 중’임을<br/>
+						 &nbsp; 광고에 표시해야 함.<br/> 
+						- 박스오피스/예매율 1위 표기 시 공신력 있는 기관의 자료를 제출하여야 하며, 출처 및 기간을 <br/>
+						 &nbsp; 표시해야 함. (예 : 7월 1일, 영진위 통합전산망 기준)<br/>
+						- 모바일 게임에서 마켓별 이용등급이 다를 경우 더 높은 등급으로 표시해야 함 <br/>
+						- 같은 게임물을 다른 버전으로 각기 다른 이용등급을 받았을 경우, 게임 명칭 및 등급을 명확하게<br/>
+						&nbsp; 표기하여야 함.<br/>  
+						&nbsp; 예시) 000 파이터 2.0 / 청소년이용불가 (O)<br/>         
+					    &nbsp; 000 파이터 1.0 / 12세이용가 (O)<br/>
+					    &nbsp; 000 파이터 / 12세이용가 (X)<br/>
+   						</td>
+					</tr>								
+					<tr>
+						<td height="1" colspan="5" bgcolor="d6d6d6"> </td>
+					</tr>
+					<tr>
+						<td height="30"> </td>
+						<td class="gray4 small center number">8</td>
+						<td> </td>
+						<td class="gray4 small hand" id="q30" onclick="getAnswer(30);" onmouseover="setOver(this);" onmouseout="setOut(29,this);"><img src="https://cmreview.kobaco.co.kr/images/ico_q.gif" alt="질문" hspace="10" align="absmiddle" />금융 광고</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td id="num30" style="display:none;" colspan="2" class="faq_a1"><img src="https://cmreview.kobaco.co.kr/images/ico_a.gif" alt="답변" align="absmiddle" /></td>
+						<td id="a30" style="display:none;" colspan="3" class="gray4 small faq_a2">
+						- 금융업 광고는 금융관련법령에 의해 인·허가를 받지 않거나 등록하지 않으면 방송광고를 할 수 없<br/>
+						&nbsp; 음.<br/>
+						- 손해보험상품은 손해보험협회, 생명보험상품은 생명보험협회, 투자신탁 및 증권 상품 등의 경우<br/>
+						  &nbsp; 에는 금융투자협회의 법적 사전심의를 거쳤음을 증명해야 함. 이를 증명하기 위해 각 협회의 광고<br/>
+						  &nbsp; 사전 심의필증을 증빙자료로 제출해야 함.<br/>
+						- 투자자문업 및 투자일임업과 관련해서는 ‘손실의 보전 또는 이익을 보장하는 경우 외의 손실보전<br/>
+						  &nbsp; 또는 이익보장으로 오인하게 하는 표현’, ‘고객 또는 제3자가 당해 투자자문회사를 추천하거나 보증<br/>
+						  &nbsp; 하는 내용을 표시하는 내용’, ‘수익률이나 운용실적이 좋은 기간의 실적만을 제시하는 표현’, <br/>
+						  &nbsp; ‘투자자문 회사가 이용하는 특정 투자분석기법이 재산 또는 실적을 일정 수준 이상으로 확보하여<br/>
+					      &nbsp; 준다고 광고하는 행위’ 등을 할 수 없음.
+						</td>
+					</tr>							
+					<tr>
+						<td height="1" colspan="5" bgcolor="d6d6d6"> </td>
+					</tr>
+					<tr>
+						<td height="30"> </td>
+						<td class="gray4 small center number">9</td>
+						<td> </td>
+						<td class="gray4 small hand" id="q31" onclick="getAnswer(31);" onmouseover="setOver(this);" onmouseout="setOut(30,this);"><img src="https://cmreview.kobaco.co.kr/images/ico_q.gif" alt="질문" hspace="10" align="absmiddle" />상조업 광고</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td id="num31" style="display:none;" colspan="2" class="faq_a1"><img src="https://cmreview.kobaco.co.kr/images/ico_a.gif" alt="답변" align="absmiddle" /></td>
+						<td id="a31" style="display:none;" colspan="3" class="gray4 small faq_a2">
+						-「방송광고에 관한 심의규정」제40조의3(상조업)에 따른 의무 표시 사항을 따를 것.<br/>
+						  &nbsp; · 중도해약환급금에 대한 환급기준 및 환급시기<br/>
+						  &nbsp; 총 고객환급 의무액, 상조 관련 자산 및 이에 대한 공인회계사의 회계감사·검토 수감 여부<br/>
+						  &nbsp;&nbsp;&nbsp;&nbsp;(최근 사업년도 재무자료 기준으로 명시할 것)<br/>
+						  &nbsp; · 표시기준은 「방송광고에 관한 심의규정」제40조의3(상조업)제2항 참조<br/>
+						- 라디오의 경우에도 위의 의무 표시 사항을 멘트로 표기하여야 함.<br/>
+						- 상조와 가전제품 결합 상품의 경우 무료로 제공되는 것이 아닌 결합 상품임을 알 수 있도록<br/>
+						  &nbsp; 표기하여야 하며, 해당 상품 중도 해지 시의 중요 정보(결합상품의 잔여 할부금 일시납 등)를 명확<br/>
+						  &nbsp; 하게 표기하여야 함.
+						</td>
+					</tr>						
+					<tr>
+						<td height="1" colspan="5" bgcolor="d6d6d6"> </td>
+					</tr>
+					<tr>
+						<td height="30"> </td>
+						<td class="gray4 small center number">10</td>
+						<td> </td>
+						<td class="gray4 small hand" id="q32" onclick="getAnswer(32);" onmouseover="setOver(this);" onmouseout="setOut(31,this);"><img src="https://cmreview.kobaco.co.kr/images/ico_q.gif" alt="질문" hspace="10" align="absmiddle" />대부업 광고</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td id="num32" style="display:none;" colspan="2" class="faq_a1"><img src="https://cmreview.kobaco.co.kr/images/ico_a.gif" alt="답변" align="absmiddle" /></td>
+						<td id="a32" style="display:none;" colspan="3" class="gray4 small faq_a2">
+						- 대부업 광고(전당포 광고 포함)는 「방송광고에 관한 심의규정」제38조의3(대부업)에 따른<br/>
+						&nbsp;&nbsp;의무 표시 사항을 따를 것.<br/>
+						  &nbsp; · 명칭 또는 대표자 성명<br/>
+					      &nbsp; · 대부업 등록번호<br/>
+						  &nbsp; · 대부이자율 및 연체이자율<br/>
+						  &nbsp; · 이자 외에 추가비용이 있는 경우 그 내용<br/> 
+						  &nbsp; · 표시기준은「방송광고에 관한 심의규정」제38조3(대부업)제2항 참고<br/>
+						- 라디오의 경우에도 위의 의무 표시 사항을 멘트로 표기해야 함.<br/>
+						</td>
+					</tr>						
+					<tr>
+						<td height="1" colspan="5" bgcolor="d6d6d6"> </td>
+					</tr>
+					<tr>
+						<td height="30"> </td>
+						<td class="gray4 small center number">11</td>
+						<td> </td>
+						<td class="gray4 small hand" id="q33" onclick="getAnswer(33);" onm5ouseover="setOver(this);" onmouseout="setOut(32,this);"><img src="https://cmreview.kobaco.co.kr/images/ico_q.gif" alt="질문" hspace="10" align="absmiddle" />자동차 광고</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td id="num33" style="display:none;" colspan="2" class="faq_a1"><img src="https://cmreview.kobaco.co.kr/images/ico_a.gif" alt="답변" align="absmiddle" /></td>
+						<td id="a33" style="display:none;" colspan="3" class="gray4 small faq_a2">
+						- 자동차 사양 언급 시, 선택사양인 경우에는 그 여부를 자막으로 고지해야 함(라디오 생략 가능).<br/>
+						- 휠 타이어를 언급할 경우, 비법정단위인 ‘인치’ 사용은 불가하나 ‘인치’를 삭제한 ‘00″타이어’의 <br/>  
+						  &nbsp; 표현은 가능함.<br/>
+						- 연비를 표현할 경우, 복합연비, 도심연비, 고속도로연비의 구분을 명확하게 해주어야 함. <br/>
+					</tr>	
+					<tr>
+						<td height="1" colspan="5" bgcolor="d6d6d6"> </td>
+					</tr>
+					<tr>
+						<td height="30"> </td>
+						<td class="gray4 small center number">12</td>
+						<td> </td>
+						<td class="gray4 small hand" id="q34" onclick="getAnswer(34);" onmouseover="setOver(this);" onmouseout="setOut(33,this);"><img src="https://cmreview.kobaco.co.kr/images/ico_q.gif" alt="질문" hspace="10" align="absmiddle" />교육기관 광고</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td id="num34" style="display:none;" colspan="2" class="faq_a1"><img src="https://cmreview.kobaco.co.kr/images/ico_a.gif" alt="답변" align="absmiddle" /></td>
+						<td id="a34" style="display:none;" colspan="3" class="gray4 small faq_a2">
+						- 대학교를 광고하고자 하는 자가 교육부 대학알리미의 공시지표를 인용할 경우, 광고주 임의로 <br/>
+						&nbsp; 항목을 분류하여 1위라고 할 수 없으며 자료 인용 시, 자료의 출처인 ‘대학알리미(또는 ‘교육부’)’와<br/>
+						&nbsp; 해당연도를 TV자막 또는 라디오멘트로 고지해야 함.<br/>  
+                        - 학원광고에서 국제중, 특목고, 명문대 합격을 보장하는 표현은 제한됨.
+						</td>
+					</tr>
+					<tr>
+						<td height="1" colspan="5" bgcolor="136990"> </td>
+					</tr>
+				</table>
+				<!--리스트 끝-->
+				<div class="space8"></div>
+				<!--버튼 시작-->
+				<table width="570" border="0" cellspacing="0" cellpadding="0" align="center">
+					<tr>
+						<td align="right"><a href="javascript:self.close();"><img src="https://cmreview.kobaco.co.kr/images/btn_close.gif" alt="닫기"/></a></td>
+					</tr>
+				</table>
+				<!--버튼 끝-->
+				<!--pop_본문 끝-->
+				<div class="space8"></div>
+			</td>
+		</tr>
+		<tr>
+			<td height="3" bgcolor="11658b"> </td>
+		</tr>
+		<tr>
+			<td height="2" bgcolor="0e516f"> </td>
+		</tr>
+	</table>
+</body>
+</html>
+
